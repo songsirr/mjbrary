@@ -1,5 +1,7 @@
 package com.mj.song;
 
+import com.mj.song.date.DateFormatGlobal;
+import com.mj.song.date.DateUtil;
 import com.mj.song.measurement.LengthConverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,7 +15,12 @@ class NumberUtilTest {
     }
 
     @Test
-    void inchToCm(){
+    void lengthConverter(){
         Assertions.assertEquals(1, LengthConverter.CENTIMETER.toInch(2.54));
+    }
+
+    @Test
+    void time(){
+        System.out.println(DateUtil.datetimeToString(DateFormatGlobal.MDY));
     }
 }
