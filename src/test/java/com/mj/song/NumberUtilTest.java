@@ -3,6 +3,7 @@ package com.mj.song;
 import com.mj.song.date.DateFormatGlobal;
 import com.mj.song.date.DateUtil;
 import com.mj.song.measurement.LengthConverter;
+import com.mj.song.web.PasswordGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,5 +23,6 @@ class NumberUtilTest {
     @Test
     void time(){
         System.out.println(DateUtil.datetimeToString(DateFormatGlobal.MDY));
+        System.out.println(PasswordGenerator.generate());
     }
 }
