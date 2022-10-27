@@ -34,10 +34,19 @@ DateUtil.datetimeToString(DateFormatGlobal.YDM) -> return "yyyy-MM-dd hh:mm:ss" 
 DateUtil.datetimeToString(some date, "DateFormatGlobal.YDM) -> return "yyyy-MM-dd hh:mm:ss" with some date
 ```
 
-###com.mj.song.date  
+###com.mj.song.web  
 ####this package have some util for web dev  
 - PasswordGenerator
 > generate random password (may for forgot password something), can change pattern if you need
 ```java 
 PasswordGenerator.generate() -> return "gEo<9UH?"
+```
+
+###com.mj.song.object  
+####this package have some util for object 
+- ObjectUtil
+>1.1 removeEmptyFields
+> >this method will set null for empty(but not a null) field 
+```java 
+removeEmptyFields(Object o);
 ```
