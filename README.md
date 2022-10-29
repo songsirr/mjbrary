@@ -48,5 +48,20 @@ PasswordGenerator.generate() -> return "gEo<9UH?"
 >1.1 removeEmptyFields
 > >this method will set null for empty(but not a null) field 
 ```java 
-removeEmptyFields(Object o);
+ObjectUtil.removeEmptyFields(Object o);
+```
+
+###com.mj.song.string  
+####this package have some util for string 
+- StringUtil
+>1.1 isNullOrEmpty
+> >this method will return boolean that parameter string is null or empty (length = 0)
+```java 
+StringUtil.isNullOrEmpty(String str); -> return boolean
+```
+
+>1.2 isNullOrBlank
+> >this method will return boolean that parameter string is null or only have white space 
+```java 
+StringUtil.isNullOrBlank(String str); -> return boolean
 ```

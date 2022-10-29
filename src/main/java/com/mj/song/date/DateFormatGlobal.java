@@ -1,6 +1,6 @@
 package com.mj.song.date;
 
-enum DateFormatGlobal {
+public enum DateFormatGlobal {
 
     YMD("yyyy-MM-dd"),
     MDY("MM/dd/yy"),
