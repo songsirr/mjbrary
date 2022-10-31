@@ -51,6 +51,20 @@ PasswordGenerator.generate() -> return "gEo<9UH?"
 ObjectUtil.removeEmptyFields(Object o);
 ```
 
+>1.2 mapToObject
+> >this method will convert map to object, need to casting returned object 
+```java 
+TestClass tc = new TestClass();
+tc = (TestClass)ObjectUtil.mapToObject(map, tc);
+```
+
+>1.3 objectToMap
+> >this method will convert object to map, this will return HashMap
+```java 
+ObjectUtilTest.TestClass t = new ObjectUtilTest.TestClass("f", "s", "t");
+Map map = ObjectUtil.objectToMap(t);
+```
+
 ###com.mj.song.string  
 ####this package have some util for string 
 - StringUtil
