@@ -30,9 +30,19 @@ public enum MEASUREMENT {
             }
 
             public double convert(double value){
-                System.out.println("from " + this.from + " to " + this.to + " value " + value);
-                return 0;
+                double a = com.mj.song.measurement.LENGTH.getByKey(this.from).getScale(); //1
+                double b = com.mj.song.measurement.LENGTH.getByKey(this.to).getScale(); //10
+                double r = Math.round(((a*value)/b)*1000000)/1000000.0;
+                return r;
             }
         }
+    }
+
+    public double convert(MEASUREMENT measurement, double value){
+        switch (MEASUREMENT.valueOf(measurement.name())){
+            case LENGTH: break;
+            case SQUARE: break;
+        }
+        return 0;
     }
 }

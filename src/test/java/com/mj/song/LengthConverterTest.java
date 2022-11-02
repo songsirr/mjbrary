@@ -1,6 +1,7 @@
 package com.mj.song;
 
 import com.mj.song.measurement.LengthConverter;
+import com.mj.song.measurement.MEASUREMENT;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,5 +23,11 @@ class LengthConverterTest {
     void centimeterAndKilometer(){
         Assertions.assertEquals(0.00001, LengthConverter.CENTIMETER.toKilometer(1));
         Assertions.assertEquals(100000, LengthConverter.KILOMETER.toCentimeter(1));
+    }
+
+    @Test
+    void newTest(){
+//        System.out.println(MEASUREMENT.LENGTH.from("cm").to("mm").convert(1));
+        Assertions.assertEquals(10, MEASUREMENT.LENGTH.from("cm").to("mm").convert(1));
     }
 }

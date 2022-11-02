@@ -79,3 +79,12 @@ StringUtil.isNullOrEmpty(String str); -> return boolean
 ```java 
 StringUtil.isNullOrBlank(String str); -> return boolean
 ```
+
+###com.mj.song.number  
+####this package have some util for number 
+- NumberUtil
+>1.1 formatCommas
+> >this method will remark the commas
+```java 
+NumberUtil.formatCommas(123000); -> rerutn "123,000"
+```
