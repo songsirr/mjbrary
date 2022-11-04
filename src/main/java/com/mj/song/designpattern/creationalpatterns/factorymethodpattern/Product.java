@@ -1,4 +1,4 @@
-package com.mj.song.designpattern.factorymethodpattern;
+package com.mj.song.designpattern.creationalpatterns.factorymethodpattern;
 
 /**
  * interface or abstract class for group of some product

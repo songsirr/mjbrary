@@ -1,4 +1,4 @@
-package com.mj.song.designpattern.builderpattern;
+package com.mj.song.designpattern.creationalpatterns.builderpattern;
 
 public class BuilderProduct {
 
@@ -12,6 +12,18 @@ public class BuilderProduct {
         this.name = builder.name;
         this.age = builder.age;
         this.gender = builder.gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getGender() {
+        return gender;
     }
 
     public static Builder builder(){
