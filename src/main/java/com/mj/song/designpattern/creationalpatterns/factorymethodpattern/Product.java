@@ -6,6 +6,6 @@ package com.mj.song.designpattern.creationalpatterns.factorymethodpattern;
 public class Product {
 
     public void created(){
-        System.out.println("product was created");
+//        System.out.println("product was created");
     }
 }

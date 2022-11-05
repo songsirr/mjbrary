@@ -7,7 +7,7 @@ public class ConcreteCreatorA extends Creator {
 
     @Override
     public Product factoryMethod(String name) {
-        System.out.println("made by ConcreteCreatorA");
+//        System.out.println("made by ConcreteCreatorA");
         Product p = null;
         switch (name){
             case "A" : p = new ConcreteProductA(); break;
