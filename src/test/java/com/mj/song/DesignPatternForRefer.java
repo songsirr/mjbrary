@@ -1,14 +1,14 @@
 package com.mj.song;
 
+import com.mj.song.designpattern.behavioralpatterns.observerpattern.Observable;
+import com.mj.song.designpattern.behavioralpatterns.observerpattern.ObservableProduct;
+import com.mj.song.designpattern.behavioralpatterns.observerpattern.ObserverProduct;
 import com.mj.song.designpattern.creationalpatterns.builderpattern.BuilderProduct;
 import com.mj.song.designpattern.creationalpatterns.factorymethodpattern.*;
 import com.mj.song.designpattern.creationalpatterns.prototypepattern.MutablePrototypeProduct;
 import com.mj.song.designpattern.creationalpatterns.prototypepattern.PrototypeProduct;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 class DesignPatternForRefer {
 
@@ -139,5 +139,15 @@ class DesignPatternForRefer {
         System.out.println(list);
         System.out.println(list3);
         */
+    }
+
+    @Test
+    void observerPatternExample(){
+        // the observer pattern is a software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+        Observable observable = new ObservableProduct();
+        ObserverProduct observer = new ObserverProduct();
+        observable.addObserver(observer);
+        observable.notifyObserver("something");
+        Assertions.assertEquals(observer.getSomething(), "something");
     }
 }
