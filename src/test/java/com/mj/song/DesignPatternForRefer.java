@@ -7,6 +7,8 @@ import com.mj.song.designpattern.creationalpatterns.builderpattern.BuilderProduc
 import com.mj.song.designpattern.creationalpatterns.factorymethodpattern.*;
 import com.mj.song.designpattern.creationalpatterns.prototypepattern.MutablePrototypeProduct;
 import com.mj.song.designpattern.creationalpatterns.prototypepattern.PrototypeProduct;
+import com.mj.song.designpattern.structuralpatterns.proxypattern.ProxySubject;
+import com.mj.song.designpattern.structuralpatterns.proxypattern.Subject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -149,5 +151,12 @@ class DesignPatternForRefer {
         observable.addObserver(observer);
         observable.notifyObserver("something");
         Assertions.assertEquals(observer.getSomething(), "something");
+    }
+
+    @Test
+    void proxyPatternExample(){
+        Subject s = new ProxySubject();
+        Assertions.assertEquals("proxy subject", s.methodThatNoNeedHugeResource());
+        Assertions.assertEquals("real subject", s.methodThatNeedHugeResource());
     }
 }
